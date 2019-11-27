@@ -10,11 +10,8 @@ export const Logo = styled.a `
 	  vertical-align: middle;
   }`;
 export const NavBarWrapper = styled.div `
-  position: fixed;
   height: 56px;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #f0f0f0;
   & > .container {
@@ -22,10 +19,9 @@ export const NavBarWrapper = styled.div `
   }
 `;
 export const Nav = styled.div `
-  position: absolute;
+  margin: 0 auto;
+  // display: flow-root; //相当于清除浮动，在BFC中跟overflow:hidden,position非relative等属性一样
   width: 960px;
-  left: 50%;
-  transform: translateX(-50%);
 `;
 export const NavBarItem = styled.li `
   padding: 0 20px;
@@ -55,6 +51,54 @@ export const NavBarList = styled.ul `
 `;
 export const InputBarWrapper = styled.div `
   position: relative;
+`;
+export const ToggleSearchBar = styled.div `
+  position: absolute;
+  width: 300px;
+  padding: 0 20px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+	background: #fff;
+  // > .search-title {
+    > .hot-search {
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #969696;
+    }
+    > .change-another {
+      float: right;
+      font-size: 13px;
+      cursor: pointer;
+      > .iconfont {
+        display: inline-block;
+        color: #666;
+        margin-right: 3px;
+        font-size: 12px;
+        transition: all .2s ease-in;
+        transform-origin: center center;
+      }
+    }
+  // }
+  > ul {
+    width: 100%;
+    overflow: hidden;
+    > li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      border: 1px solid #ddd;
+      color: #787878;
+      border-radius: 3px;
+      line-height: 20px;
+      > a {
+        display: block;
+        padding: 0 5px;   
+      } 
+    }
+  }
 `;
 export const NavBarSearch = styled.input.attrs({
   placeholder: '搜索'
