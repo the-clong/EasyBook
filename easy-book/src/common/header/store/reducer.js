@@ -15,26 +15,25 @@ const headReducer = (state = defaultState, action) => {
   switch (action.type) {
     case actionType.SEARCH_FOCUS:
       return state.set('widenInput', true);
-      break;
+    // break;
     case actionType.SEARCH_BLUR:
       return state.set('widenInput', false);
-      break;
+    // break;
     case actionType.SEARCH_LIST:
       return state.merge({
         'searchList': action.searchList,
         'totalPage': action.totalPage
       });
-      break;
+    // break;
     case actionType.CHANGE_PAGEINDEX:
       return state.set('pageIndex', action.pageIndex);
-      break;
+    // break;
     case actionType.MOUSE_ENTER:
-      console.log('enter-----');
       return state.set('mouseIn', true);
-      break;
+    // break;
     case actionType.MOUSE_LEAVE:
       return state.set('mouseIn', false);
-      break;
+    // break;
     default:
       return state;
   }

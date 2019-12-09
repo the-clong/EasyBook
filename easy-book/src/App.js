@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import store from './store';
 import { Globalstyle } from './style';
+import 'bootstrap/dist/js/bootstrap.js'
 import Header from "./common/header";
 import Home from "./pages/home";
 import Detail from "./pages/detail";

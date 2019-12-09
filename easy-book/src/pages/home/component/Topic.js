@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  TopicWrapper
+  TopicWrapper,
+  TopicItem
 } from '../../home/style';
 class Topic extends Component {
 
@@ -12,7 +13,14 @@ class Topic extends Component {
         {
           this.props.list.map((item) => {
             return (
-              <div key={item.get('id')}>{item.get('title')}</div>
+              <TopicItem key={item.get('id')}>
+                <img
+                  className='topic-pic'
+                  src={item.get('imgUrl')}
+                  alt=''
+                />
+                {item.get('title')}
+              </TopicItem>
             )
           })
         }

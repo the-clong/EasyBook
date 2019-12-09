@@ -1,0 +1,1 @@
+export const SEARCH_BOOKLIST = 'home/search_booklist';

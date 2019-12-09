@@ -30,7 +30,8 @@ export const mouseLeavePage = () => ({
 });
 export const getSearchList = (pageSize) => {
   return function (dispatch) {
-    axios.get('/api/searchList.json').then((res) => {
+    axios.get('http://localhost:7888/easy-book/search-list.php').then((res) => {
+      console.log(res);
       const data = res.data;
       if (data.success) {
         dispatch(searchHeaderList(data.data, pageSize));

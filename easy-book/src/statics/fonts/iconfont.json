@@ -13,11 +13,25 @@
       "unicode_decimal": 59035
     },
     {
+      "icon_id": "1120996",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
       "icon_id": "1228826",
       "name": "search",
       "font_class": "search",
       "unicode": "e6c8",
       "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "1410207",
+      "name": "add",
+      "font_class": "add1",
+      "unicode": "e628",
+      "unicode_decimal": 58920
     },
     {
       "icon_id": "1621077",

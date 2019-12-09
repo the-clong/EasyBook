@@ -7,7 +7,4 @@ class Detail extends Component {
     )
   }
 }
-const mapState = () => {
-
-}
 export default connect(null, null)(Detail)

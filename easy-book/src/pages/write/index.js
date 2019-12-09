@@ -7,7 +7,4 @@ class Write extends Component {
     )
   }
 }
-const mapState = () => {
-
-}
 export default connect(null, null)(Write)

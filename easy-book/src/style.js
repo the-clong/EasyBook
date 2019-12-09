@@ -1,7 +1,7 @@
 import {
   createGlobalStyle
 } from 'styled-components';
-export const Globalstyle = createGlobalStyle `
+export const Globalstyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -48,6 +48,9 @@ export const Globalstyle = createGlobalStyle `
   a {
     color: #333;
     touch-action: manipulation;
+  }
+  a {
+    cursor: pointer;
   }
   a:active, a:hover,a {
     text-decoration: none;
