@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Logo = styled.a `
+export const Logo = styled.a`
   float: left;
   display: block;
   width: 100px;
@@ -9,21 +9,27 @@ export const Logo = styled.a `
 	  width: 100%;
 	  vertical-align: middle;
   }`;
-export const NavBarWrapper = styled.div `
+export const NavBarWrapper = styled.div`
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 56px;
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
   & > .container {
     height: 56px;
   }
 `;
-export const Nav = styled.div `
+export const Nav = styled.div`
   margin: 0 auto;
   // display: flow-root; //相当于清除浮动，在BFC中跟overflow:hidden,position非relative等属性一样
   width: 960px;
 `;
-export const NavBarItem = styled.li `
+export const NavBarItem = styled.li`
   padding: 0 20px;
   font-size: 17px;
   color: #333;
@@ -44,15 +50,15 @@ export const NavBarItem = styled.li `
     font-size: 20px;
     margin-right: 5px;
   }
-
 `;
-export const NavBarList = styled.ul `
+export const NavBarList = styled.ul`
   float: left;
 `;
-export const InputBarWrapper = styled.div `
+export const InputBarWrapper = styled.div`
   position: relative;
+  z-index: 10;
 `;
-export const ToggleSearchBar = styled.div `
+export const ToggleSearchBar = styled.div`
   position: absolute;
   width: 300px;
   padding: 0 20px;
@@ -103,7 +109,7 @@ export const ToggleSearchBar = styled.div `
 export const NavBarSearch = styled.input.attrs({
   placeholder: '搜索'
 })
-`
+  `
   height: 36px;
   width: 180px;
   outline: none;
@@ -125,7 +131,7 @@ export const NavBarSearch = styled.input.attrs({
      width: 180px;
   }
 `;
-export const SearchIconWrapper = styled.div `
+export const SearchIconWrapper = styled.div`
   width: 30px;
   height: 30px;
   &.active {
@@ -151,7 +157,7 @@ export const SearchIconWrapper = styled.div `
     color: rgb(51, 51, 51);
   }
 `;
-export const PageBarItem = styled.div `
+export const PageBarItem = styled.div`
   float: right;
   height: 100%;
   padding: 10px 13px;
@@ -168,7 +174,7 @@ export const PageBarItem = styled.div `
     vertical-align: middle;
   }
 `;
-export const UserActiveLink = styled.a `
+export const UserActiveLink = styled.a`
   display: block;
   float: right;
   height: 40px;

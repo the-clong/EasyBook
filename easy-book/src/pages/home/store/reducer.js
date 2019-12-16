@@ -110,13 +110,16 @@ const defaultState = fromJS({
       title: '无限猴子',
       content: '写了423.5k字 · 2.2k喜欢',
     },
-
-  ]
+  ],
+  isShowScrollTop: false
 });
 const homeReducer = (state = defaultState, action) => {
   switch (action.type) {
     case actionType.SEARCH_BOOKLIST:
       return state.set('bookList', fromJS(action.bookList));
+    case actionType.SHOW_SCROLLTOP:
+      console.log(action.isShowScrollTop)
+      return state.set('isShowScrollTop', action.isShowScrollTop);
     default:
       return state;
   }

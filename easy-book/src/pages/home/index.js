@@ -7,41 +7,56 @@ import NoteList from './component/NoteList';
 import QRCode from './component/QRCode';
 import Board from './component/Board';
 import Recommand from './component/Recommand';
+import BackTools from './component/BackTools';
 import {
   HomeWrapper,
   HomeLeft,
   HomeRight
 } from './style';
 class Home extends Component {
-  componentDidMount () {
-    this.props.searchBookList();
-  }
   render () {
     return (
-      <HomeWrapper>
-        <HomeLeft>
-          <CarouselTop />
-          <TopicList />
-          <NoteList />
-        </HomeLeft>
-        <HomeRight>
-          <Board />
-          <QRCode />
-          <Recommand />
-        </HomeRight>
-        <button onClick={this.test}>123</button>
-      </HomeWrapper>
+      <>
+        <HomeWrapper>
+          <HomeLeft>
+            <CarouselTop />
+            <TopicList />
+            <NoteList />
+          </HomeLeft>
+          <HomeRight>
+            <Board />
+            <QRCode />
+            <Recommand />
+          </HomeRight>
+          <BackTools />
+        </HomeWrapper>
+      </>
     )
   }
-  test () {
-    console.log('text----');
+  componentDidMount () {
+    this.props.searchBookList();
+    this.bindEvents();
+  }
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.props.changeScrollTopShow);
+  }
+  bindEvents () {
+    window.addEventListener('scroll', this.props.changeScrollTopShow);
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return {
     searchBookList () {
       // console.log(actionCreater);
       dispatch(actionCreater.searchBookList());
+    },
+    changeScrollTopShow () {
+      if (document.documentElement.scrollTop > 100) {
+        dispatch(actionCreater.showScrollBackTop(true));
+      } else {
+        dispatch(actionCreater.showScrollBackTop(false));
+      }
     }
   }
 }

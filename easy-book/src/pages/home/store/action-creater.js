@@ -4,6 +4,10 @@ export const searchBookListAction = (list) => ({
   type: actionType.SEARCH_BOOKLIST,
   bookList: list
 });
+export const showScrollBackTop = (isShowBackTop) => ({
+  type: actionType.SHOW_SCROLLTOP,
+  isShowScrollTop: isShowBackTop
+});
 export const searchBookList = () => {
   return (dispatch) => {
     console.log(Api.searchEasyList);

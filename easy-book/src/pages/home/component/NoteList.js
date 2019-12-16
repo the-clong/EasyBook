@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ListWrapper, ListItem, ListInfo } from '../style';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 class NoteList extends Component {
   render () {
-
     return (
       <ListWrapper>
         {
@@ -12,7 +12,7 @@ class NoteList extends Component {
             return (
               <ListItem key={data.get('id')}>
                 <ListInfo>
-                  <a className="title" href="/ccc">{data.get('title')}</a>
+                  <Link className="title" to={'/detail/' + data.get('id')} target="_blank">{data.get('title')}</Link>
                   <p className="abstract">{data.get('public_abbr')}</p>
                 </ListInfo>
                 <a className="itemImg" style={{ display: data.get('list_image_url') !== "" ? 'block' : 'none' }} href="/">

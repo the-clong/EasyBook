@@ -3,7 +3,7 @@ styled
   from 'styled-components';
 export const HomeWrapper = styled.div`
   width: 960px;
-  margin: 0 auto;
+  margin: 56px auto;
   padding-top: 30px;
   overflow: hidden;
 `;
@@ -198,5 +198,24 @@ export const RecommandItem = styled.li`
     color: #969696;
     font-size: 12px;
     margin-top: 6px;
+  }
+`;
+export const BackToolsWrapper = styled.ul`
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  > li {
+    border: 1px solid #dcdcdc;
+    > a {
+      background-color: #fff;
+      :hover {
+        background-color: #969696;
+      }
+      display: block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
   }
 `;

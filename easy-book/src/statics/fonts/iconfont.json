@@ -6,6 +6,20 @@
   "description": "练习react的简书项目",
   "glyphs": [
     {
+      "icon_id": "579286",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "902050",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
       "icon_id": "1009214",
       "name": "反馈填写",
       "font_class": "fankuitianxie",
@@ -13,11 +27,11 @@
       "unicode_decimal": 59035
     },
     {
-      "icon_id": "1120996",
-      "name": "add",
-      "font_class": "add",
-      "unicode": "e629",
-      "unicode_decimal": 58921
+      "icon_id": "1191001",
+      "name": "返回顶部",
+      "font_class": "fanhuidingbu",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
     },
     {
       "icon_id": "1228826",
@@ -60,6 +74,13 @@
       "font_class": "shuaxin",
       "unicode": "e631",
       "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "8358885",
+      "name": "打赏1",
+      "font_class": "dashang",
+      "unicode": "e691",
+      "unicode_decimal": 59025
     }
   ]
 }
