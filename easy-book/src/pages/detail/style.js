@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import { Menu} from 'antd';
+const {SubMenu} = Menu;
+export const FooterMenu = styled(SubMenu)`
+    .ant-dropdown-menu-submenu-arrow-icon {
+      vertical-align: middle;
+    }
+`;
 export const DetailBack = styled.div`
   width: 100%;
   height: 100%;
@@ -46,7 +53,7 @@ export const DetailRight = styled.aside`
     display: block;
     padding: 2px 6px;
     position: absolute;
-    color: #fff;
+    color: #fff;  
     background-color: rgba(0,0,0,.5);
     font-size: 14px;
     bottom: 0;
@@ -97,12 +104,8 @@ export const DetailRight = styled.aside`
         padding: 6px 0;
         color: #969696;
         font-size: 12px;
-      }
-      
+      }   
     }
-    
-    
-    
   }
 `;
 export const AuthorInfo = styled.div`
@@ -207,4 +210,40 @@ export const FooterWrapper = styled.footer`
   background-color: #fff;
   box-shadow: 0 -2px 10px rgba(0,0,0,.05);
   z-index: 100;
+`;
+export const FooterContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+  display: flex;
+`;
+export const FooterInput = styled.textarea.attrs(props => ({
+    placeholder: '写下你的评论...'
+}))`
+   width: 400px;
+   height: 36px;
+   margin-right: 15px;
+   border-radius: 18px;
+   padding: 10px 18px;
+   border: none;
+   background-color: #f2f2f2;
+`;
+export const FooterButtons = styled.div`
+   color: #969696;
+   padding: 7px 10px;
+   box-sizing: content-box;
+   cursor: pointer;
+   & > .iconfont {
+     font-size: 20px;
+     vertical-align: middle;
+   }
+   & > span {
+     margin-left: 8px;
+     font-size: 14px;
+   }
+   > svg {
+     display: block;
+   }
 `;

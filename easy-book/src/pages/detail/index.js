@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { actionCreater } from './store';
 import { connect } from 'react-redux';
 import DetailFooter from './footer';
 import {
@@ -10,9 +11,12 @@ import {
   Info,
   InfoHeader,
   InfoContent,
-  DertailHandleWrapper
+  DertailHandleWrapper,
 } from './style';
 class Detail extends Component {
+  componentDidMount () {
+    this.props.getUserDetailList();
+  }
   render () {
     return (
       <DetailBack>
@@ -43,35 +47,42 @@ class Detail extends Component {
           </DetailLeft>
           <DetailRight>
             {/* 广告页 */}
-            <section class="advert-img">
+            <section className="advert-img">
               <img src="https://cdn2.jianshu.io/shakespeare/_next/static/images/note_page_right_sidebar_ad-e09371bad78fc240eee9de382a301456.jpeg" alt="广告位" />
-              <span class="advert-icon">广告</span>
+              <span className="advert-icon">广告</span>
             </section>
-            <section class="user-article">
-              <a href class="article-avater">
+            <section className="user-article">
+              <a href className="article-avater">
                 <img src="https://upload.jianshu.io/users/upload_avatars/3721842/1e34cc03eb71.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/90/h/90/format/webp" alt="头像" />
               </a>
-              <div class="article-info">
-                <div class="info-top">
-                  <div class="article-title">金石明镜</div>
-                  <div class="concern">
+              <div className="article-info">
+                <div className="info-top">
+                  <div className="article-title">金石明镜</div>
+                  <div className="concern">
                     关注
                   </div>
                 </div>
-                <p>123456</p>
+                <p>总资产299 (约28.91元)</p>
               </div>
+              <ul>
+                {
+                  this.props.userList.map((item, index) => {
+                    return <li key={index}>{item.get('title')}</li>
+                  })
+                }
+              </ul>
             </section>
             {/* <section class=""></section> */}
           </DetailRight>
           <DertailHandleWrapper>
             <div className="thumbs-up">
-              <i class="icon iconfont icondianzan"></i>
+              <i className="icon iconfont icondianzan"></i>
             </div>
             <div className="thumbs-num">
               336赞
               </div>
             <div className="reward">
-              <i class="icon iconfont icondashang"></i>
+              <i className="icon iconfont icondashang"></i>
             </div>
             <div className="reward-down">
               赞赏
@@ -83,4 +94,16 @@ class Detail extends Component {
     )
   }
 }
-export default connect(null, null)(Detail)
+const mapStateToProps = (state) => {
+  return {
+    userList: state.getIn(['detail', 'userList'])
+  }
+}
+const mapDispatchProps = (dispatch) => {
+  return {
+    getUserDetailList () {
+      dispatch(actionCreater.getUserDetailList());
+    }
+  }
+};
+export default connect(mapStateToProps, mapDispatchProps)(Detail)

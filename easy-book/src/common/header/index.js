@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logoPic from '../../statics/logo.png';
-import betaPic from '../../statics/beta.png';
+import logoPic from '../../statics/images/logo.png';
+import betaPic from '../../statics/images/beta.png';
 import { CSSTransition } from 'react-transition-group'; //引入css-transition展示动画
 import { connect } from 'react-redux';
 import { actionCreater } from './store';

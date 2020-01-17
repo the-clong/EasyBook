@@ -11,9 +11,9 @@ export const showScrollBackTop = (isShowBackTop) => ({
 export const searchBookList = () => {
   return (dispatch) => {
     console.log(Api.searchEasyList);
-    Api.searchEasyList('http://localhost:7888/easy-book/index1.php').then((res) => {
+    Api.searchEasyList('/api/list').then((res) => {
       console.log(res.data);
-      dispatch(searchBookListAction(res.data));
+      dispatch(searchBookListAction(res.data.list));
     });
   };
 };

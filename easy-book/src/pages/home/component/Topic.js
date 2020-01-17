@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   TopicWrapper,
   TopicItem
-} from '../../home/style';
+} from '../style';
 class Topic extends Component {
 
   render () {

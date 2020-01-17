@@ -64,36 +64,36 @@ const defaultState = fromJS({
   boardList: [
     {
       title: 'Banner s club',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png'
+      imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png'
     },
     {
       title: 'Banner s 7',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
+      imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
     },
     {
       title: 'Banner s 5',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png'
+      imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png'
     },
     {
       title: 'Banner s 6',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png'
+      imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png'
     },
   ],
   recommandList: [
     {
-      imgAvatar: '//upload.jianshu.io/users/upload_avatars/301940/189d69dd-af7c-4290-9e2c-89e98acf3603.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+      imgAvatar: 'http://upload.jianshu.io/users/upload_avatars/301940/189d69dd-af7c-4290-9e2c-89e98acf3603.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
       name: '卢璐说',
       title: '卢璐说',
       content: '写了1320k字 · 27.9k喜欢',
     },
     {
-      imgAvatar: '//upload.jianshu.io/users/upload_avatars/14715425/e0668349-8c75-43db-8a9d-c388e5f00d0d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+      imgAvatar: 'http://upload.jianshu.io/users/upload_avatars/14715425/e0668349-8c75-43db-8a9d-c388e5f00d0d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
       name: '简书钻首席小管家',
       title: '简书钻首席小管家',
       content: '写了205.3k字 · 155.1k喜欢',
     },
     {
-      imgAvatar: '//upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+      imgAvatar: 'http://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
       name: '梅拾璎',
       title: '梅拾璎',
       content: '写了263.9k字 · 29.6k喜欢',
@@ -105,7 +105,7 @@ const defaultState = fromJS({
       content: '写了772.8k字 · 2.4k喜欢',
     },
     {
-      imgAvatar: '//upload.jianshu.io/users/upload_avatars/13213889/7314c5cc-ca7f-4542-b914-2c8dffaf324d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+      imgAvatar: 'http://upload.jianshu.io/users/upload_avatars/13213889/7314c5cc-ca7f-4542-b914-2c8dffaf324d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
       name: '无限猴子',
       title: '无限猴子',
       content: '写了423.5k字 · 2.2k喜欢',
@@ -114,6 +114,7 @@ const defaultState = fromJS({
   isShowScrollTop: false
 });
 const homeReducer = (state = defaultState, action) => {
+  // console.log(require('~/shared'));
   switch (action.type) {
     case actionType.SEARCH_BOOKLIST:
       return state.set('bookList', fromJS(action.bookList));

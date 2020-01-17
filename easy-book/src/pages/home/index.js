@@ -9,9 +9,9 @@ import Board from './component/Board';
 import Recommand from './component/Recommand';
 import BackTools from './component/BackTools';
 import {
-  HomeWrapper,
   HomeLeft,
-  HomeRight
+  HomeRight,
+  HomeWrapper
 } from './style';
 class Home extends Component {
   render () {

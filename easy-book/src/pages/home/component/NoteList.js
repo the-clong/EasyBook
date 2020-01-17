@@ -8,7 +8,7 @@ class NoteList extends Component {
       <ListWrapper>
         {
           this.props.bookList.map((item) => {
-            const data = item.getIn(['object', 'data']);
+            const data = item;
             return (
               <ListItem key={data.get('id')}>
                 <ListInfo>

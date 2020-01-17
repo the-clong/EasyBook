@@ -1,8 +1,7 @@
-import {
-  createGlobalStyle
-} from 'styled-components';
-export const Globalstyle = createGlobalStyle`
-  html, body, div, span, applet, object, iframe,
+import {createGlobalStyle} from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+ html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
@@ -11,8 +10,8 @@ export const Globalstyle = createGlobalStyle`
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
   	margin: 0;
@@ -23,11 +22,19 @@ export const Globalstyle = createGlobalStyle`
   	vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, 
+  article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
   	display: block;
   }
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
   body {
+  font-size: 14px;
   	line-height: 1;
   }
   ol, ul {
@@ -40,6 +47,9 @@ export const Globalstyle = createGlobalStyle`
   q:before, q:after {
   	content: '';
   	content: none;
+  }
+  svg {
+    vertical-align: middle;
   }
   table {
   	border-collapse: collapse;
@@ -55,4 +65,8 @@ export const Globalstyle = createGlobalStyle`
   a:active, a:hover,a {
     text-decoration: none;
   }
-`;
+  textarea {outline: none;resize:none;}
+  textarea::-webkit-input-placeholder{
+      color:#969696;
+    }
+		`;
